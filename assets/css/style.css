@@ -603,3 +603,50 @@ footer {
         max-width: 320px;
     }
 }
+
+/* --- Styles pour les badges verrouillés (En cours) --- */
+.badge-locked {
+    background: rgba(17, 26, 47, 0.4); /* Fond plus sombre */
+    cursor: default; /* Pas de curseur main */
+    position: relative;
+}
+
+.badge-locked:hover {
+    transform: none; /* Pas de mouvement au survol */
+    box-shadow: none;
+    border-color: var(--border);
+}
+
+.badge-locked .badge-img {
+    filter: grayscale(100%) opacity(0.5); /* Noir & Blanc + transparence */
+}
+
+.badge-overlay {
+    position: absolute;
+    top: 35%; /* Centrage vertical approximatif sur l'image */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    color: var(--text-main);
+    background: rgba(0, 0, 0, 0.6);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    backdrop-filter: blur(4px);
+    border: 1px solid var(--border);
+}
+
+.status-pending {
+    background: rgba(234, 179, 8, 0.1); /* Jaune/Orange */
+    color: #facc15 !important;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.75rem !important;
+    display: inline-block !important;
+    border: 1px solid rgba(234, 179, 8, 0.2);
+}
