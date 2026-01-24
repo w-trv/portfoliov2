@@ -3,13 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio de William TROUVÉ - Étudiant en BUT R&T">
-    <title>William TROUVÉ | Portfolio</title>
+    <meta name="description" content="Portfolio de William TROUVÉ - Étudiant en BUT R&T à l'IUT de La Rochelle.">
+    <title>William TROUVÉ | Portfolio Étudiant R&T</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Outfit:wght@500;700;900&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
@@ -21,7 +23,7 @@
                 <li><a href="#home" data-i18n="nav_home">Accueil</a></li>
                 <li><a href="#skills" data-i18n="nav_skills">Compétences</a></li>                
                 <li><a href="#projects" data-i18n="nav_projects">Projets (SAE)</a></li>
-                <li><a href="#hobbies" data-i18n="nav_hobbies">Loisirs</a></li>
+                <li><a href="#hobbies" data-i18n="nav_hobbies">Hobbies</a></li>
                 <li><a href="#contact" class="btn-nav" data-i18n="nav_contact">Me Contacter</a></li>
                 <li><button id="lang-toggle" class="lang-btn">🇺🇸 EN</button></li>
             </ul>
@@ -37,15 +39,15 @@
         <section id="home" class="hero">
             <div class="container hero-grid">
                 <div class="hero-text">
-                    <span class="badge" data-i18n="hero_badge">BUT Réseaux & Télécoms</span>
+                    <span class="badge" data-i18n="hero_badge">BUT Réseaux & Télécoms parcours Cybersécurité</span>
                     <h1>William <span class="gradient-text">TROUVÉ</span></h1>
                     <h2 data-i18n="hero_subtitle">Étudiant BUT2 R&T parcours Cybersécurité <br><span class="highlight">à l'IUT de La Rochelle</span>.</h2>
                     
-                    <p data-i18n="hero_desc">Mon projet professionnel consiste à devenir Expert en Cyberdéfense. Je souhaite avoir un travail qui me permet de voyager au maximum. Mes compétences en CTF me permettent d'avoir une certaine aisance technique.</p>
+                    <p data-i18n="hero_desc">Mon projet professionnel consiste à devenir Expert en Cyberdéfense. Je souhaite avoir un travail qui me permet de voyager. Mes compétences en CTF me permettent d'avoir une certaine aisance technique.</p>
                     
                     <div class="cta-group">
-                        <a href="#projects" class="btn-primary"><span data-i18n="btn_projects">Voir mes SAE</span> <i class="fas fa-arrow-right"></i></a>
-                        <a href="assets/cv.pdf" target="_blank" class="btn-secondary"><span data-i18n="btn_cv">Mon CV</span> <i class="fas fa-download"></i></a>
+                        <a href="#projects" class="btn-primary"><span data-i18n="btn_sae">Voir mes SAE</span> <i class="fas fa-arrow-right"></i></a>
+                        <a href="assets/img/CV.pdf" target="_blank" class="btn-secondary"><span data-i18n="btn_cv">Mon CV</span> <i class="fas fa-download"></i></a>
                     </div>
                     
                     <div class="hero-stats">
@@ -55,7 +57,7 @@
                         </div>
                         <div class="stat">
                             <span class="number">B2</span>
-                            <span class="label" data-i18n="stat_english">Anglais (Cambridge)</span>
+                            <span class="label" data-i18n="stat_eng">Anglais (Cambridge)</span>
                         </div>
                         <div class="stat">
                             <span class="number">CCNA2</span>
@@ -80,26 +82,26 @@
                 
                 <div class="skills-grid">
                     <div class="skill-category">
-                        <h3><i class="fas fa-network-wired"></i> <span data-i18n="cat_network">Réseaux & Système</span></h3>
+                        <h3><i class="fas fa-network-wired"></i> <span data-i18n="cat_net">Réseaux & Système</span></h3>
                         <div class="skill-list">
                             <div class="skill-item">
                                 <div class="info">
                                     <span data-i18n="skill_cisco">Réseaux Cisco (CCNA 2 validé)</span>
-                                    <span data-i18n="level_advanced">Avancé</span>
+                                    <span data-i18n="lvl_adv">Avancé</span>
                                 </div>
                                 <div class="progress-bar"><div class="fill" style="width: 80%"></div></div>
                             </div>
                             <div class="skill-item">
                                 <div class="info">
                                     <span data-i18n="skill_linux">Linux / Serveurs (DNS, DHCP, Web)</span>
-                                    <span data-i18n="level_intermediate">Intermédiaire</span>
+                                    <span data-i18n="lvl_int">Intermédiaire</span>
                                 </div>
                                 <div class="progress-bar"><div class="fill" style="width: 60%"></div></div>
                             </div>
                             <div class="skill-item">
                                 <div class="info">
-                                    <span data-i18n="skill_hacking">Hacking (CTF)</span>
-                                    <span data-i18n="level_advanced">Avancé</span>
+                                    <span data-i18n="skill_hack">Hacking (CTF)</span>
+                                    <span data-i18n="lvl_adv">Avancé</span>
                                 </div>
                                 <div class="progress-bar"><div class="fill" style="width: 75%"></div></div>
                             </div>
@@ -111,22 +113,22 @@
                         <div class="skill-list">
                             <div class="skill-item">
                                 <div class="info">
-                                    <span data-i18n="skill_python">Python (Data)</span>
-                                    <span data-i18n="level_intermediate">Intermédiaire</span>
+                                    <span data-i18n="skill_py">Python (Data)</span>
+                                    <span data-i18n="lvl_int">Intermédiaire</span>
                                 </div>
                                 <div class="progress-bar"><div class="fill" style="width: 60%"></div></div>
                             </div>
                             <div class="skill-item">
                                 <div class="info">
                                     <span>HTML5 / CSS3</span>
-                                    <span data-i18n="level_intermediate">Intermédiaire</span>
+                                    <span data-i18n="lvl_int">Intermédiaire</span>
                                 </div>
                                 <div class="progress-bar"><div class="fill" style="width: 50%"></div></div>
                             </div>
                             <div class="skill-item">
                                 <div class="info">
                                     <span data-i18n="skill_sql">SQL / Bases de données</span>
-                                    <span data-i18n="level_intermediate">Intermédiaire</span>
+                                    <span data-i18n="lvl_int">Intermédiaire</span>
                                 </div>
                                 <div class="progress-bar"><div class="fill" style="width: 60%"></div></div>
                             </div>
@@ -135,38 +137,43 @@
                 </div>
 
                 <div class="certifications-container">
-                    <h3><i class="fas fa-certificate"></i> <span data-i18n="certif_title">Certifications Officielles</span></h3>
-                    <p class="cert-subtitle" data-i18n="certif_subtitle">Badges vérifiés par Cisco Networking Academy</p>
+                    <h3><i class="fas fa-certificate"></i> <span data-i18n="cert_title">Certifications Officielles</span></h3>
+                    <p class="cert-subtitle" data-i18n="cert_sub">Badges vérifiés par Cisco Networking Academy</p>
                     
                     <div class="badges-wrapper">
-                        <a href="https://www.credly.com/badges/70d71df5-f3dc-4380-9b9d-f22513a70417/public_url" target="_blank" class="badge-card">
+                        <a href="https://www.credly.com/badges/7d5ec228-fc3a-4f1f-99c9-c7dccd949fc3" target="_blank" class="badge-card">
                             <div class="badge-glow"></div>
                             <img src="assets/img/CCNAITN__1_.png" alt="Badge Cisco CCNA 1" class="badge-img">
                             <div class="badge-info">
                                 <h4>CCNA 1</h4>
                                 <span>Introduction to Networks</span>
-                                <span class="status-verified"><i class="fas fa-check-circle"></i> <span data-i18n="status_verified">Vérifié</span></span>
+                                <span class="status-verified"><i class="fas fa-check-circle"></i> <span data-i18n="stat_verif">Vérifié</span></span>
                             </div>
                         </a>
-                        <a href="https://www.credly.com/badges/f4ccdba9-dd65-4349-baad-8f05df116443/public_url" target="_blank" class="badge-card">
+
+                        <a href="https://www.credly.com/badges/78aa1ddb-df6a-4388-b6ec-52fce8ad98d1" target="_blank" class="badge-card">
                             <div class="badge-glow"></div>
                             <img src="assets/img/CCNASRWE__1_.png" alt="Badge Cisco CCNA 2" class="badge-img">
                             <div class="badge-info">
                                 <h4>CCNA 2</h4>
                                 <span>Switching, Routing, & Wireless</span>
-                                <span class="status-verified"><i class="fas fa-check-circle"></i> <span data-i18n="status_verified">Vérifié</span></span>
+                                <span class="status-verified"><i class="fas fa-check-circle"></i> <span data-i18n="stat_verif">Vérifié</span></span>
                             </div>
                         </a>
+
                         <div class="badge-card badge-locked">
-                            <div class="badge-overlay"><i class="fas fa-lock"></i></div>
-                            <img src="assets/img/CCNA.png" alt="Badge Cisco CCNA 3" class="badge-img">
+                            <div class="badge-overlay">
+                                <i class="fas fa-lock"></i>
+                            </div>
+                            <img src="assets/img/CCNA3.png" alt="Badge Cisco CCNA 3" class="badge-img">
                             <div class="badge-info">
                                 <h4>CCNA 3</h4>
-                                <span>Enterprise Networking & Security</span>
-                                <span class="status-pending"><i class="fas fa-spinner fa-spin"></i> <span data-i18n="status_pending">En cours</span></span>
+                                <span>Enterprise Networking, Security & Automation</span>
+                                <span class="status-pending"><i class="fas fa-spinner fa-spin"></i> <span data-i18n="stat_pend">En cours</span></span>
                             </div>
                         </div>
                     </div>
+
                     <div class="credly-link-container">
                         <a href="https://www.credly.com/users/william-trouve.01621a2e/badges" target="_blank" class="btn-credly">
                             <span data-i18n="btn_credly">Voir mon profil complet sur Credly</span> <i class="fas fa-external-link-alt"></i>
@@ -178,31 +185,33 @@
 
         <section id="projects" class="section bg-alt">
             <div class="container">
-                <h2 class="section-title" data-i18n="projects_title">Projets Universitaires (SAEs) 🎓</h2>
+                <h2 class="section-title" data-i18n="proj_title">Projets Universitaires (SAEs) 🎓</h2>
                 
                 <div class="projects-grid">
                     
                     <article class="project-card highlight-card" data-category="security">
                         <div class="card-header">
-                            <span class="tag tag-accent" data-i18n="tag_personal">Personnel</span>
+                            <span class="tag tag-accent" data-i18n="tag_perso">Personnel</span>
                             <h3>Hacking (CTF)</h3>
                         </div>
                         <div class="card-body">
-                            <p data-i18n="desc_ctf">Je fais des défis pratiques de hacking que l'on appelle "CTF". Le but consiste à pirater une machine en partant d'une application web vulnérable fictive. Je suis actuellement niveau 13.</p>
+                            <p data-i18n="desc_ctf">Je fais des défis pratiques de hacking que l'on appelle "CTF". Le but consiste à pirater une machine en partant d'une application web vulnérable fictive. Je suis actuellement niveau LEGEND et me situe à la 20k ème place (Top 2%).</p>
                             <p class="project-link-p">
-                                <a href="https://tryhackme.com/p/ShonencY" target="_blank" class="link-text"><i class="fas fa-user-secret"></i> <span data-i18n="link_tryhackme">Voir mon profil TryHackMe</span></a>
+                                <a href="https://tryhackme.com/p/ShonencY" target="_blank" class="link-text"><i class="fas fa-user-secret"></i> <span data-i18n="link_thm">Voir mon profil TryHackMe</span></a>
                             </p>
-                            <ul class="tech-tags"><li>Root-Me</li><li>TryHackMe</li></ul>
+                            <ul class="tech-tags">
+                                <li>TryHackMe</li>
+                            </ul>
                         </div>
                     </article>
 
                     <article class="project-card" data-category="network">
                         <div class="card-header">
                             <span class="tag">SAE 2.04</span>
-                            <h3 data-i18n="title_sae204">Projet intégratif</h3>
+                            <h3 data-i18n="tit_204">Projet intégratif</h3>
                         </div>
                         <div class="card-body">
-                            <p data-i18n="desc_sae204">Projet d’équipe (3 personnes) pour concevoir une infrastructure réseau sécurisée pour la NBA (scénario fictif), en appliquant des configurations sur switches, routeurs et serveurs DNS/DHCP/Web.</p>
+                            <p data-i18n="desc_204">Projet d’équipe (3 personnes) pour concevoir une infrastructure réseau sécurisée pour la NBA (scénario fictif), en appliquant des configurations sur switches, routeurs et serveurs DNS/DHCP/Web.</p>
                             <ul class="tech-tags"><li>Cisco</li><li>Infra</li></ul>
                         </div>
                     </article>
@@ -210,10 +219,10 @@
                     <article class="project-card" data-category="dev">
                        <div class="card-header">
                            <span class="tag">SAE 2.03</span>
-                           <h3 data-i18n="title_sae203">Solution informatique</h3>
+                           <h3 data-i18n="tit_203">Solution informatique</h3>
                        </div>
                        <div class="card-body">
-                           <p data-i18n="desc_sae203">Conception d’une base de données SQL sur les incidents en cybersécurité des 10 dernières années, avec un diagramme UML pour structurer les liens entre classes.</p>
+                           <p data-i18n="desc_203">Conception d’une base de données SQL sur les incidents en cybersécurité des 10 dernières années, avec un diagramme UML pour structurer les liens entre classes.</p>
                            <ul class="tech-tags"><li>SQL</li><li>UML</li></ul>
                        </div>
                    </article>
@@ -221,10 +230,10 @@
                    <article class="project-card" data-category="telecom">
                         <div class="card-header">
                             <span class="tag">SAE 2.02</span>
-                            <h3 data-i18n="title_sae202">Mesures physiques</h3>
+                            <h3 data-i18n="tit_202">Mesures physiques</h3>
                         </div>
                         <div class="card-body">
-                            <p data-i18n="desc_sae202">Réalisation en binôme de mesures sur des systèmes de transmission pour évaluer la qualité des signaux, avec analyse et présentation des résultats via cartographie radio et hypsogramme.</p>
+                            <p data-i18n="desc_202">Réalisation en binôme de mesures sur des systèmes de transmission pour évaluer la qualité des signaux, avec analyse et présentation des résultats via cartographie radio et hypsogramme.</p>
                             <ul class="tech-tags"><li>Signaux</li><li>Mesures</li></ul>
                         </div>
                     </article>
@@ -232,10 +241,10 @@
                     <article class="project-card" data-category="network">
                         <div class="card-header">
                             <span class="tag">SAE 2.01</span>
-                            <h3 data-i18n="title_sae201">Réseaux locaux</h3>
+                            <h3 data-i18n="tit_201">Réseaux locaux</h3>
                         </div>
                         <div class="card-body">
-                            <p data-i18n="desc_sae201">Obtention de la certification CCNA1, axée sur les bases des réseaux locaux et la configuration des équipements actifs.</p>
+                            <p data-i18n="desc_201">Obtention de la certification CCNA1, axée sur les bases des réseaux locaux et la configuration des équipements actifs.</p>
                             <ul class="tech-tags"><li>CCNA1</li><li>Switching</li></ul>
                         </div>
                     </article>
@@ -243,10 +252,10 @@
                     <article class="project-card" data-category="data">
                         <div class="card-header">
                             <span class="tag">SAE 1.05</span>
-                            <h3 data-i18n="title_sae105">Traiter des données</h3>
+                            <h3 data-i18n="tit_105">Traiter des données</h3>
                         </div>
                         <div class="card-body">
-                            <p data-i18n="desc_sae105">J’ai approfondi Python pour traiter des données (dataset : Top 500 des businessmen). Objectif : formater des données et réaliser des analyses complexes.</p>
+                            <p data-i18n="desc_105">J’ai approfondi Python pour traiter des données (dataset : Top 500 des businessmen). Objectif : formater des données et réaliser des analyses complexes.</p>
                             <ul class="tech-tags"><li>Python</li><li>Data</li></ul>
                         </div>
                     </article>
@@ -254,10 +263,10 @@
                     <article class="project-card" data-category="web">
                         <div class="card-header">
                             <span class="tag">SAE 1.04</span>
-                            <h3 data-i18n="title_sae104">Présence en ligne</h3>
+                            <h3 data-i18n="tit_104">Présence en ligne</h3>
                         </div>
                         <div class="card-body">
-                            <p data-i18n="desc_sae104">J’ai découvert HTML et CSS pour créer un site de portfolio, hébergé sur les serveurs de l’IUT en respectant les normes W3C.</p>
+                            <p data-i18n="desc_104">J’ai découvert HTML et CSS pour créer un site de portfolio, hébergé sur les serveurs de l’IUT en respectant les normes W3C.</p>
                             <ul class="tech-tags"><li>HTML</li><li>CSS</li></ul>
                         </div>
                     </article>
@@ -265,10 +274,10 @@
                     <article class="project-card" data-category="telecom">
                         <div class="card-header">
                             <span class="tag">SAE 1.03</span>
-                            <h3 data-i18n="title_sae103">Transmission</h3>
+                            <h3 data-i18n="tit_103">Transmission</h3>
                         </div>
                         <div class="card-body">
-                            <p data-i18n="desc_sae103">L’objectif était de réaliser des mesures pour caractériser les supports de transmission utilisés dans notre département d'IUT (cuivre, fibre, coaxial).</p>
+                            <p data-i18n="desc_103">L’objectif était de réaliser des mesures pour caractériser les supports de transmission utilisés dans notre département d'IUT (cuivre, fibre, coaxial).</p>
                             <ul class="tech-tags"><li>Câblage</li><li>Physique</li></ul>
                         </div>
                     </article>
@@ -276,10 +285,10 @@
                     <article class="project-card" data-category="network">
                         <div class="card-header">
                             <span class="tag">SAE 1.02</span>
-                            <h3 data-i18n="title_sae102">Initiation Réseaux</h3>
+                            <h3 data-i18n="tit_102">Initiation Réseaux</h3>
                         </div>
                         <div class="card-body">
-                            <p data-i18n="desc_sae102">Conception d'une petite infrastructure réseau pour le festival du Printemps de Bourges dans un contexte fictif. Application des configs de base aux switches.</p>
+                            <p data-i18n="desc_102">Conception d'une petite infrastructure réseau pour le festival du Printemps de Bourges dans un contexte fictif. Application des configs de base aux switches.</p>
                             <ul class="tech-tags"><li>Infra</li><li>Switching</li></ul>
                         </div>
                     </article>
@@ -287,10 +296,10 @@
                     <article class="project-card" data-category="security">
                         <div class="card-header">
                             <span class="tag">SAE 1.01</span>
-                            <h3 data-i18n="title_sae101">Hygiène informatique</h3>
+                            <h3 data-i18n="tit_101">Hygiène informatique</h3>
                         </div>
                         <div class="card-body">
-                            <p data-i18n="desc_sae101">Cette première SAE s'est présentée sous forme ludique : création de scénarios fictifs sur l'hygiène informatique pour faire deviner des méthodes d'attaques.</p>
+                            <p data-i18n="desc_101">Cette première SAE s'est présentée sous forme ludique : création de scénarios fictifs sur l'hygiène informatique pour faire deviner des méthodes d'attaques.</p>
                             <ul class="tech-tags"><li>Sensibilisation</li><li>Scénarios</li></ul>
                         </div>
                     </article>
@@ -301,32 +310,31 @@
 
         <section id="hobbies" class="section">
             <div class="container">
-                <h2 class="section-title" data-i18n="hobbies_title">Autres Compétences 🎹</h2>
+                <h2 class="section-title" data-i18n="hobby_title">Hobbies</h2>
                 <div class="hobbies-wrapper">
                     
                     <div class="hobby-box">
                         <i class="fas fa-video"></i>
-                        <h4 data-i18n="hobby_video_title">Montage Vidéo</h4>
-                        <p data-i18n="hobby_video_desc">5 ans d'expérience YouTube. Montage pour influenceurs et réalisation d'un court-métrage sur la sécurité informatique.</p>
-                        <a href="https://youtu.be/dxaL-Xzxgqw" target="_blank" class="link-text" data-i18n="link_video">Voir la vidéo</a>
+                        <h4 data-i18n="hob_vid_t">Montage Vidéo</h4>
+                        <p data-i18n="hob_vid_d">5 ans d'expérience YouTube. Montage pour influenceurs et réalisation d'un court-métrage sur la sécurité informatique.</p>
+                        <a href="https://youtu.be/dxaL-Xzxgqw" target="_blank" class="link-text" data-i18n="link_vid">Voir la vidéo</a>
                     </div>
 
                     <div class="hobby-box">
-                        <i class="fas fa-sliders-h"></i>
-                        <h4>MAO / FL Studio</h4>
-                        <p data-i18n="hobby_mao_desc">Utilisation très régulière pour la création de prods (instrumentales) et le beatmaking. Maîtrise du workflow audio.</p>
+                        <i class="fas fa-sliders-h"></i> <h4>FL Studio</h4>
+                        <p data-i18n="hob_mao_d">Utilisation très régulière pour la création de prods (instrumentales) et le beatmaking. Maîtrise des paramètres audios pour une comptabilité sonore sur tous les appareils.</p>
                     </div>
 
                     <div class="hobby-box">
                         <i class="fas fa-music"></i>
-                        <h4 data-i18n="hobby_piano_title">Piano</h4>
-                        <p data-i18n="hobby_piano_desc">Pratique régulière pour la créativité et la discipline.</p>
+                        <h4 data-i18n="hob_piano_t">Piano</h4>
+                        <p data-i18n="hob_piano_d">Pratique régulière pour la créativité et la discipline.</p>
                     </div>
 
                     <div class="hobby-box">
                         <i class="fas fa-users"></i>
-                        <h4 data-i18n="hobby_social_title">Relationnel</h4>
-                        <p data-i18n="hobby_social_desc">Je n'ai aucun mal à faire de nouvelles rencontres et à avoir un bon feeling avec les gens. J'aime le travail d'équipe.</p>
+                        <h4 data-i18n="hob_soc_t">Relationnel</h4>
+                        <p data-i18n="hob_soc_d">Je n'ai aucun mal à faire de nouvelles rencontres et à avoir un bon feeling avec les gens. J'aime le travail d'équipe.</p>
                     </div>
 
                 </div>
@@ -335,8 +343,8 @@
 
         <section id="contact" class="section contact-section">
             <div class="container small-container">
-                <h2 class="section-title" data-i18n="contact_title">Me Contacter 📞</h2>
-                <p data-i18n="contact_desc">Étudiant motivé par les défis techniques, n'hésitez pas à me contacter pour échanger.</p>
+                <h2 class="section-title" data-i18n="contact_t">Me Contacter 📞</h2>
+                <p data-i18n="contact_d">Étudiant motivé par les défis techniques, n'hésitez pas à me contacter pour échanger.</p>
                 
                 <div class="contact-card">
                     <a href="mailto:william.trouve@etudiant.univ-lr.fr" class="contact-item">
@@ -350,7 +358,7 @@
                 </div>
 
                 <footer>
-                    <p data-i18n="footer_text">© 2026 William TROUVÉ — Portfolio Étudiant</p>
+                    <p data-i18n="footer">© 2026 William TROUVÉ — Portfolio Étudiant</p>
                 </footer>
             </div>
         </section>
