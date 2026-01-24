@@ -650,3 +650,45 @@ footer {
     display: inline-block !important;
     border: 1px solid rgba(234, 179, 8, 0.2);
 }
+
+/* --- ANIMATIONS SCROLL (REVEAL) --- */
+
+/* État initial : invisible et décalé vers le bas */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s cubic-bezier(0.5, 0, 0, 1);
+    will-change: opacity, transform; /* Optimisation performance */
+}
+
+/* État final : visible et à sa place d'origine */
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Délais en cascade (Stagger Effect) pour les grilles */
+/* Cela permet aux éléments d'une grille d'apparaître un par un */
+
+/* Pour les compétences */
+.skill-item:nth-child(1) { transition-delay: 0.1s; }
+.skill-item:nth-child(2) { transition-delay: 0.2s; }
+.skill-item:nth-child(3) { transition-delay: 0.3s; }
+
+/* Pour les projets (on va jusqu'à 10 pour être large) */
+.project-card:nth-child(1) { transition-delay: 0.1s; }
+.project-card:nth-child(2) { transition-delay: 0.2s; }
+.project-card:nth-child(3) { transition-delay: 0.3s; }
+.project-card:nth-child(4) { transition-delay: 0.1s; } /* On reboucle pour les lignes suivantes */
+.project-card:nth-child(5) { transition-delay: 0.2s; }
+.project-card:nth-child(6) { transition-delay: 0.3s; }
+
+/* Pour les badges certifications */
+.badge-card:nth-child(1) { transition-delay: 0.1s; }
+.badge-card:nth-child(2) { transition-delay: 0.3s; }
+.badge-card:nth-child(3) { transition-delay: 0.5s; }
+
+/* Pour les loisirs */
+.hobby-box:nth-child(1) { transition-delay: 0.1s; }
+.hobby-box:nth-child(2) { transition-delay: 0.3s; }
+.hobby-box:nth-child(3) { transition-delay: 0.5s; }
