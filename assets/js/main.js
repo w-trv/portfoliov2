@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
             
             hero_badge: "BUT Réseaux & Télécoms parcours Cybersécurité",
             hero_subtitle: "Étudiant BUT2 R&T parcours Cybersécurité <br><span class='highlight'>à l'IUT de La Rochelle</span>.",
-            hero_desc: "Mon projet professionnel consiste à devenir Expert en Cyberdéfense. Je souhaite avoir un travail qui me permet de voyager. Mes compétences en CTF me permettent d'avoir une certaine aisance technique.",
+            hero_desc: "Mon projet professionnel consiste à devenir Expert en Cyberdéfense. Je souhaite avoir un travail qui me permette de voyager. Mes compétences en CTF me donnent une certaine aisance technique.",
             btn_sae: "Voir mes SAE",
             btn_cv: "Mon CV",
             
