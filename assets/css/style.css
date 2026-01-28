@@ -2,13 +2,13 @@
    1. VARIABLES & RESET
    ========================================= */
 :root {
-    --bg-dark: #0a0f1c;      /* Fond principal (Bleu nuit très sombre) */
+    --bg-dark: #0a0f1c;      /* Fond principal */
     --bg-card: #111a2f;      /* Fond des cartes */
-    --primary: #3b82f6;      /* Bleu vibrant (Action) */
-    --accent: #06b6d4;       /* Cyan néon (Détails) */
-    --text-main: #f1f5f9;    /* Blanc cassé (Lecture) */
-    --text-muted: #94a3b8;   /* Gris bleuté (Secondaire) */
-    --border: rgba(255, 255, 255, 0.08); /* Bordures subtiles */
+    --primary: #3b82f6;      /* Bleu vibrant */
+    --accent: #06b6d4;       /* Cyan néon */
+    --text-main: #f1f5f9;    /* Blanc cassé */
+    --text-muted: #94a3b8;   /* Gris bleuté */
+    --border: rgba(255, 255, 255, 0.08);
     
     --font-heading: 'Outfit', sans-serif;
     --font-body: 'Inter', sans-serif;
@@ -26,12 +26,18 @@ html {
     scroll-behavior: smooth;
 }
 
+/* --- FIX FOOTER STEP 1 : Flexbox sur le body --- */
 body {
     background-color: var(--bg-dark);
     color: var(--text-main);
     font-family: var(--font-body);
     line-height: 1.6;
     overflow-x: hidden;
+    
+    /* Le secret pour le footer en bas : */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 a {
@@ -134,7 +140,7 @@ h1, h2, h3, h4 {
 .btn-nav {
     border: 1px solid var(--primary);
     padding: 8px 20px;
-    border-radius: 50px; /* Bouton arrondi pour le contact */
+    border-radius: 50px;
     color: var(--primary) !important;
 }
 
@@ -144,13 +150,12 @@ h1, h2, h3, h4 {
     box-shadow: 0 0 15px rgba(59, 130, 246, 0.4);
 }
 
-/* Bouton Langue (Rectangulaire arrondi) */
 .lang-btn {
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid var(--border);
     color: var(--text-muted);
     padding: 6px 12px;
-    border-radius: 6px; /* Forme carrée arrondie */
+    border-radius: 6px;
     cursor: pointer;
     font-size: 0.85rem;
     font-weight: 600;
@@ -177,8 +182,15 @@ h1, h2, h3, h4 {
 /* =========================================
    4. HERO SECTION
    ========================================= */
+/* --- FIX FOOTER STEP 2 : Main prend l'espace --- */
+main {
+    flex: 1; /* Pousse le footer vers le bas */
+    display: flex;
+    flex-direction: column;
+}
+
 .hero {
-    min-height: 100vh;
+    min-height: 100vh; /* Garde le hero grand */
     display: flex;
     align-items: center;
     position: relative;
@@ -197,7 +209,7 @@ h1, h2, h3, h4 {
     background: rgba(6, 182, 212, 0.1);
     color: var(--accent);
     padding: 5px 12px;
-    border-radius: 6px; /* Plus carré */
+    border-radius: 6px;
     font-size: 0.85rem;
     font-weight: 600;
     margin-bottom: 20px;
@@ -377,7 +389,7 @@ h1, h2, h3, h4 {
 }
 
 /* =========================================
-   6. CERTIFICATIONS (UPDATED STYLE)
+   6. CERTIFICATIONS
    ========================================= */
 .certifications-container {
     text-align: center;
@@ -455,11 +467,11 @@ h1, h2, h3, h4 {
     margin-bottom: 12px;
 }
 
-/* --- FIX FINAL : CENTRAGE OPTIQUE --- */
+/* --- BADGES STATUS (Version Corrigée & Centrée) --- */
 .status-verified, .status-pending {
     border-radius: 50px; 
     
-    /* ASTUCE : On met plus de padding en haut (7px) qu'en bas (5px) pour descendre le texte */
+    /* Padding asymétrique pour centrer le texte verticalement */
     padding: 7px 14px 5px 14px; 
     
     font-weight: 600;
@@ -471,16 +483,14 @@ h1, h2, h3, h4 {
     align-items: center;      
     justify-content: center;  
     
-    /* On laisse la hauteur de ligne normale pour éviter qu'elle n'écrase le texte */
     line-height: normal;           
     gap: 6px;                 
     
-    margin-top: 0px;
+    margin-top: 12px;
     transition: all 0.3s ease;
     min-width: 100px; 
 }
 
-/* Les couleurs restent les mêmes */
 .status-verified {
     background: rgba(16, 185, 129, 0.1); 
     color: #10b981 !important;
@@ -497,6 +507,7 @@ h1, h2, h3, h4 {
     transform: translateY(-2px);
     box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
+
 /* Locked Badge */
 .badge-locked {
     background: rgba(17, 26, 47, 0.4);
@@ -668,16 +679,105 @@ h1, h2, h3, h4 {
 .contact-item i { font-size: 1.5rem; color: var(--primary); }
 .contact-item:hover { color: var(--accent); }
 
+/* --- FIX FOOTER STEP 3 : Style et Marge --- */
 footer {
-    margin-top: 50px;
+    margin-top: auto; /* Sécurité si flex:1 ne suffit pas */
     color: var(--text-muted);
     font-size: 0.85rem;
     border-top: 1px solid var(--border);
-    padding-top: 20px;
+    padding: 20px 0;
+    text-align: center;
+    background: rgba(10, 15, 28, 0.95);
+    /* S'assurer qu'il est au-dessus du contenu */
+    z-index: 100;
 }
 
 /* =========================================
-   10. ANIMATIONS (SCROLL REVEAL)
+   10. MODAL / LIGHTBOX
+   ========================================= */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    padding-top: 50px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+    backdrop-filter: blur(5px);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 1000px;
+    position: relative;
+    text-align: center;
+}
+
+#modal-img {
+    width: 100%;
+    height: auto;
+    max-height: 80vh;
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    animation: zoomIn 0.3s;
+}
+
+@keyframes zoomIn {
+    from {transform:scale(0.8); opacity: 0;}
+    to {transform:scale(1); opacity: 1;}
+}
+
+.close-modal {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    z-index: 2001;
+}
+
+.close-modal:hover { color: var(--primary); }
+
+.nav-btn {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    background-color: rgba(0,0,0,0.3);
+    border: none;
+}
+
+.nav-btn:hover { background-color: rgba(59, 130, 246, 0.8); }
+
+.next-btn { right: 0; border-radius: 3px 0 0 3px; }
+.prev-btn { left: 0; border-radius: 3px 0 0 3px; }
+
+.clickable-project {
+    cursor: pointer;
+}
+.clickable-project:hover .card-image-overlay {
+    opacity: 1;
+}
+
+/* =========================================
+   11. ANIMATIONS (SCROLL REVEAL)
    ========================================= */
 .reveal {
     opacity: 0;
@@ -712,7 +812,7 @@ footer {
 .hobby-box:nth-child(4) { transition-delay: 0.4s; }
 
 /* =========================================
-   11. RESPONSIVE
+   12. RESPONSIVE
    ========================================= */
 @media (max-width: 768px) {
     .nav-links {
@@ -745,95 +845,9 @@ footer {
     .section-title { font-size: 2rem; }
     .project-card { margin-bottom: 20px; }
     
-    /* Bouton langue sur mobile */
     .lang-btn {
         margin-left: 0;
         margin-top: 15px;
         width: 100%;
     }
-}
-
-/* --- MODAL / LIGHTBOX --- */
-.modal {
-    display: none; /* Caché par défaut */
-    position: fixed;
-    z-index: 2000; /* Au-dessus de tout */
-    padding-top: 50px;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.9); /* Fond noir opaque */
-    backdrop-filter: blur(5px);
-}
-
-.modal-content {
-    margin: auto;
-    display: block;
-    width: 80%;
-    max-width: 1000px;
-    position: relative;
-    text-align: center;
-}
-
-#modal-img {
-    width: 100%;
-    height: auto;
-    max-height: 80vh;
-    object-fit: contain;
-    border-radius: 8px;
-    box-shadow: 0 0 20px rgba(0,0,0,0.5);
-    animation: zoomIn 0.3s;
-}
-
-@keyframes zoomIn {
-    from {transform:scale(0.8); opacity: 0;}
-    to {transform:scale(1); opacity: 1;}
-}
-
-/* Bouton Fermer */
-.close-modal {
-    position: absolute;
-    top: 20px;
-    right: 35px;
-    color: #f1f1f1;
-    font-size: 40px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: 0.3s;
-    z-index: 2001;
-}
-
-.close-modal:hover { color: var(--primary); }
-
-/* Navigation (Flèches) */
-.nav-btn {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    padding: 16px;
-    margin-top: -50px;
-    color: white;
-    font-weight: bold;
-    font-size: 30px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-    background-color: rgba(0,0,0,0.3);
-    border: none;
-}
-
-.nav-btn:hover { background-color: rgba(59, 130, 246, 0.8); }
-
-.next-btn { right: 0; border-radius: 3px 0 0 3px; }
-.prev-btn { left: 0; border-radius: 3px 0 0 3px; }
-
-/* Indication que la carte est cliquable */
-.clickable-project {
-    cursor: pointer;
-}
-.clickable-project:hover .card-image-overlay {
-    opacity: 1;
 }
