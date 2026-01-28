@@ -452,7 +452,7 @@ h1, h2, h3, h4 {
     color: var(--text-muted);
     font-size: 0.8rem;
     line-height: 1.4;
-    margin-bottom: 7px;
+    margin-bottom: 12px;
 }
 
 /* --- FIX FINAL : CENTRAGE OPTIQUE --- */
