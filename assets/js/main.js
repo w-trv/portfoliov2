@@ -1,6 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
     
-    // --- GESTION DE LA LANGUE ---
+    // ============================================================
+    // 1. GESTION DE LA LANGUE (TRADUCTION EN DIRECT)
+    // ============================================================
     const langBtn = document.getElementById('lang-toggle');
     let currentLang = localStorage.getItem('lang') || 'fr'; 
 
@@ -14,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
             
             hero_badge: "BUT Réseaux & Télécoms parcours Cybersécurité",
             hero_subtitle: "Étudiant BUT2 R&T parcours Cybersécurité <br><span class='highlight'>à l'IUT de La Rochelle</span>.",
-            hero_desc: "Mon projet professionnel consiste à devenir Expert en Cyberdéfense. Je souhaite avoir un travail qui me permette de voyager. Mes compétences en CTF me donnent une certaine aisance technique.",
+            hero_desc: "Mon projet professionnel consiste à devenir Expert en Cyberdéfense. Je souhaite avoir un travail qui me permet de voyager. Mes compétences en CTF me permettent d'avoir une certaine aisance technique.",
             btn_sae: "Voir mes SAE",
             btn_cv: "Mon CV",
             
@@ -82,7 +84,6 @@ document.addEventListener('DOMContentLoaded', () => {
             nav_hobbies: "Hobbies",
             nav_contact: "Contact Me",
             
-            // CORRECTIONS ACADÉMIQUES ICI
             hero_badge: "Bachelor's Degree in Networks & Cybersecurity",
             hero_subtitle: "2nd Year Undergraduate Student <br><span class='highlight'>University Institute of Technology (IUT)</span>.",
             hero_desc: "My professional goal is to become a Cyberdefense Expert. I want a job that allows me to travel internationally. My CTF skills give me a strong technical adaptability.",
@@ -110,7 +111,6 @@ document.addEventListener('DOMContentLoaded', () => {
             stat_pend: "In Progress",
             btn_credly: "View full Credly profile",
             
-            // CHANGEMENT DE "SAE" en "ACADEMIC PROJECT"
             proj_title: "Academic Projects 🎓",
             tag_perso: "Personal",
             desc_ctf: "I participate in practical hacking challenges called 'CTF'. The goal is to hack a machine starting from a fictional vulnerable web application. I am currently LEGEND level and ranked around 20k (Top 2%).",
@@ -127,7 +127,6 @@ document.addEventListener('DOMContentLoaded', () => {
             tag_102: "Network", tit_102: "Network Basics", desc_102: "Design of a small network infrastructure for the Printemps de Bourges festival in a fictional context. Applying basic configurations to switches.",
             tag_101: "Security", tit_101: "IT Hygiene", desc_101: "This first project was presented in a playful form: creating fictional scenarios regarding IT hygiene to help others identify attack methods.",
             
-            // TRADUCTION DES TAGS
             tag_infra: "Infra", tag_sig: "Signals", tag_mes: "Measurements", tag_cab: "Cabling", tag_phys: "Physics", tag_sens: "Awareness", tag_scen: "Scenarios",
 
             hobby_title: "Hobbies",
@@ -140,7 +139,6 @@ document.addEventListener('DOMContentLoaded', () => {
             hob_piano_t: "Piano",
             hob_piano_d: "Regular practice for creativity and discipline.",
             
-            // REFORMULATION PROFESSIONNELLE
             hob_soc_t: "Interpersonal Skills",
             hob_soc_d: "I easily connect with new people and enjoy building positive professional relationships. Teamwork is where I thrive.",
             
@@ -176,7 +174,9 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // --- CODE EXISTANT (Menu & Animations) ---
+    // ============================================================
+    // 2. GESTION DU MENU MOBILE
+    // ============================================================
     const hamburger = document.querySelector('.hamburger');
     const navLinks = document.querySelector('.nav-links');
     
@@ -194,6 +194,9 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // ============================================================
+    // 3. ANIMATIONS AU SCROLL
+    // ============================================================
     const observerOptions = { root: null, rootMargin: '0px', threshold: 0.15 };
     const observer = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
@@ -212,4 +215,86 @@ document.addEventListener('DOMContentLoaded', () => {
         el.classList.add('reveal');
         observer.observe(el);
     });
+
+    // ============================================================
+    // 4. MODALE / LIGHTBOX POUR LES PROJETS
+    // ============================================================
+    const modal = document.getElementById('project-modal');
+    const modalImg = document.getElementById('modal-img');
+    const closeBtn = document.querySelector('.close-modal');
+    const prevBtn = document.getElementById('prev-btn');
+    const nextBtn = document.getElementById('next-btn');
+    
+    let currentImages = []; // Liste des images du projet ouvert
+    let currentImageIndex = 0; // Index de l'image affichée
+
+    // Fonction pour ouvrir la modale
+    function openModal(imagesArray) {
+        if (!imagesArray || imagesArray.length === 0) return;
+        
+        currentImages = imagesArray;
+        currentImageIndex = 0;
+        
+        // Charger la première image
+        // ATTENTION : On suppose que les images sont dans assets/img/
+        // .trim() permet d'enlever les espaces inutiles s'il y en a dans le HTML
+        modalImg.src = `assets/img/${currentImages[0].trim()}`; 
+        
+        modal.style.display = "block";
+        
+        // Gérer l'affichage des flèches si plus d'une image
+        if (currentImages.length > 1) {
+            prevBtn.style.display = "block";
+            nextBtn.style.display = "block";
+        } else {
+            prevBtn.style.display = "none";
+            nextBtn.style.display = "none";
+        }
+    }
+
+    // Gestion du clic sur les cartes projets
+    document.querySelectorAll('.clickable-project').forEach(card => {
+        card.addEventListener('click', () => {
+            const imagesAttr = card.getAttribute('data-images');
+            if (imagesAttr) {
+                // On transforme la chaine "img1.png,img2.png" en tableau
+                const imagesList = imagesAttr.split(',');
+                openModal(imagesList);
+            }
+        });
+    });
+
+    // Navigation Images (Suivant/Précédent)
+    function showNextImage() {
+        currentImageIndex = (currentImageIndex + 1) % currentImages.length;
+        modalImg.src = `assets/img/${currentImages[currentImageIndex].trim()}`;
+    }
+
+    function showPrevImage() {
+        currentImageIndex = (currentImageIndex - 1 + currentImages.length) % currentImages.length;
+        modalImg.src = `assets/img/${currentImages[currentImageIndex].trim()}`;
+    }
+
+    if(nextBtn) nextBtn.addEventListener('click', (e) => { e.stopPropagation(); showNextImage(); });
+    if(prevBtn) prevBtn.addEventListener('click', (e) => { e.stopPropagation(); showPrevImage(); });
+
+    // Fermeture de la modale
+    if(closeBtn) closeBtn.addEventListener('click', () => { modal.style.display = "none"; });
+    
+    // Fermer en cliquant en dehors de l'image
+    window.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            modal.style.display = "none";
+        }
+    });
+
+    // Navigation Clavier (Flèches et Echap)
+    document.addEventListener('keydown', (e) => {
+        if (modal.style.display === "block") {
+            if (e.key === "ArrowRight") showNextImage();
+            if (e.key === "ArrowLeft") showPrevImage();
+            if (e.key === "Escape") modal.style.display = "none";
+        }
+    });
+
 });
