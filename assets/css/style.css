@@ -455,48 +455,50 @@ h1, h2, h3, h4 {
     margin-bottom: 12px;
 }
 
-/* --- FIX MODERNISATION : STATUS PILULE FIN --- */
+/* --- FIX FINAL : STATUS PILULE CENTRÉ --- */
 .status-verified, .status-pending {
-    /* Forme pilule (très arrondie) */
+    /* Forme pilule parfaite */
     border-radius: 50px; 
     
-    /* Plus fin / Moins haut */
-    padding: 4px 14px; 
+    /* Espacement équilibré */
+    padding: 6px 16px; 
     
-    /* Typographie plus fine et élégante */
-    font-weight: 500; /* Réduit de 700 à 500 */
-    font-size: 0.7rem !important; /* Légèrement plus petit */
-    letter-spacing: 1px; /* Espacement des lettres pour le style */
+    /* Typographie */
+    font-weight: 600; /* Un peu plus gras pour la lisibilité */
+    font-size: 0.75rem !important; 
+    letter-spacing: 1px; 
     text-transform: uppercase;
     
-    /* Alignement parfait icône/texte */
+    /* ALIGNEMENT PARFAIT (C'est ici que ça se joue) */
     display: inline-flex !important;
-    align-items: center;
-    gap: 6px;
-    margin-top: 10px;
+    align-items: center;      /* Centre verticalement */
+    justify-content: center;  /* Centre horizontalement */
+    line-height: 1;           /* Évite les décalages de hauteur de ligne */
+    gap: 8px;                 /* Espace entre l'icône et le texte */
     
-    /* Transition douce */
+    margin-top: 12px;
     transition: all 0.3s ease;
+    min-width: 100px; /* Assure une largeur minimale uniforme */
 }
 
 /* Badge Vert (Vérifié) */
 .status-verified {
-    background: rgba(16, 185, 129, 0.08); /* Fond très léger */
+    background: rgba(16, 185, 129, 0.1); 
     color: #10b981 !important;
-    border: 1px solid rgba(16, 185, 129, 0.3); /* Bordure fine */
+    border: 1px solid rgba(16, 185, 129, 0.3);
 }
 
 /* Badge Jaune (En cours) */
 .status-pending {
-    background: rgba(234, 179, 8, 0.08);
+    background: rgba(234, 179, 8, 0.1);
     color: #facc15 !important;
     border: 1px solid rgba(234, 179, 8, 0.3);
 }
 
-/* Petit effet au survol (Optionnel, pour le style) */
+/* Effet survol */
 .status-verified:hover, .status-pending:hover {
-    transform: translateY(-1px);
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
 /* Locked Badge */
 .badge-locked {
