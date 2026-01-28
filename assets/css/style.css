@@ -455,47 +455,44 @@ h1, h2, h3, h4 {
     margin-bottom: 12px;
 }
 
-/* --- FIX FINAL : STATUS PILULE CENTRÉ --- */
+/* --- FIX FINAL : CENTRAGE OPTIQUE --- */
 .status-verified, .status-pending {
-    /* Forme pilule parfaite */
     border-radius: 50px; 
     
-    /* Espacement équilibré */
-    padding: 6px 16px; 
+    /* ASTUCE : On met plus de padding en haut (7px) qu'en bas (5px) pour descendre le texte */
+    padding: 7px 14px 5px 14px; 
     
-    /* Typographie */
-    font-weight: 600; /* Un peu plus gras pour la lisibilité */
-    font-size: 0.75rem !important; 
+    font-weight: 600;
+    font-size: 0.7rem !important; 
     letter-spacing: 1px; 
     text-transform: uppercase;
     
-    /* ALIGNEMENT PARFAIT (C'est ici que ça se joue) */
     display: inline-flex !important;
-    align-items: center;      /* Centre verticalement */
-    justify-content: center;  /* Centre horizontalement */
-    line-height: 1;           /* Évite les décalages de hauteur de ligne */
-    gap: 8px;                 /* Espace entre l'icône et le texte */
+    align-items: center;      
+    justify-content: center;  
+    
+    /* On laisse la hauteur de ligne normale pour éviter qu'elle n'écrase le texte */
+    line-height: normal;           
+    gap: 6px;                 
     
     margin-top: 12px;
     transition: all 0.3s ease;
-    min-width: 100px; /* Assure une largeur minimale uniforme */
+    min-width: 100px; 
 }
 
-/* Badge Vert (Vérifié) */
+/* Les couleurs restent les mêmes */
 .status-verified {
     background: rgba(16, 185, 129, 0.1); 
     color: #10b981 !important;
     border: 1px solid rgba(16, 185, 129, 0.3);
 }
 
-/* Badge Jaune (En cours) */
 .status-pending {
     background: rgba(234, 179, 8, 0.1);
     color: #facc15 !important;
     border: 1px solid rgba(234, 179, 8, 0.3);
 }
 
-/* Effet survol */
 .status-verified:hover, .status-pending:hover {
     transform: translateY(-2px);
     box-shadow: 0 4px 10px rgba(0,0,0,0.15);
