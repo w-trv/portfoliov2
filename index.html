@@ -9,9 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Outfit:wght@500;700;900&display=swap" rel="stylesheet">
-    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
@@ -43,11 +41,11 @@
                     <h1>William <span class="gradient-text">TROUVÉ</span></h1>
                     <h2 data-i18n="hero_subtitle">Étudiant BUT2 R&T parcours Cybersécurité <br><span class="highlight">à l'IUT de La Rochelle</span>.</h2>
                     
-                    <p data-i18n="hero_desc">Mon projet professionnel consiste à devenir Expert en Cyberdéfense. Je souhaite avoir un travail qui me permette de voyager. Mes compétences en CTF me donnent une certaine aisance technique.</p>
+                    <p data-i18n="hero_desc">Mon projet professionnel consiste à devenir Expert en Cyberdéfense. Je souhaite avoir un travail qui me permet de voyager. Mes compétences en CTF me permettent d'avoir une certaine aisance technique.</p>
                     
                     <div class="cta-group">
                         <a href="#projects" class="btn-primary"><span data-i18n="btn_sae">Voir mes SAE</span> <i class="fas fa-arrow-right"></i></a>
-                        <a href="assets/img/CV.pdf" target="_blank" class="btn-secondary"><span data-i18n="btn_cv">Mon CV</span> <i class="fas fa-download"></i></a>
+                        <a href="assets/cv.pdf" target="_blank" class="btn-secondary"><span data-i18n="btn_cv">Mon CV</span> <i class="fas fa-download"></i></a>
                     </div>
                     
                     <div class="hero-stats">
@@ -70,6 +68,9 @@
                         <img src="assets/img/will-profil.png" alt="William Trouvé" class="profile-img">
                     </div>
                 </div>
+            </div>
+            <div class="scroll-indicator">
+                <div class="mouse"></div>
             </div>
         </section>
 
@@ -180,10 +181,10 @@
             </div>
         </section>
 
-       <section id="projects" class="section bg-alt">
+        <section id="projects" class="section bg-alt">
             <div class="container">
                 <h2 class="section-title" data-i18n="proj_title">Projets Universitaires (SAEs) 🎓</h2>
-                <p class="section-subtitle" style="text-align:center; color:var(--accent); margin-bottom:30px; font-size:0.9rem;">(Cliquez sur les projets pour voir les images 📸)</p>
+                <p style="text-align:center; color:var(--accent); margin-bottom:30px; font-size:0.9rem;">(Cliquez sur les projets pour voir les images 📸)</p>
                 
                 <div class="projects-grid">
                     
@@ -193,11 +194,14 @@
                             <h3>Hacking (CTF)</h3>
                         </div>
                         <div class="card-body">
-                            <p data-i18n="desc_ctf">Je fais des défis pratiques de hacking que l'on appelle "CTF". Le but consiste à pirater une machine en partant d'une application web vulnérable fictive.</p>
+                            <p data-i18n="desc_ctf">Je fais des défis pratiques de hacking que l'on appelle "CTF". Le but consiste à pirater une machine en partant d'une application web vulnérable fictive. Je suis actuellement niveau LEGEND et me situe à la 20k ème place (Top 2%).</p>
                             <p class="project-link-p">
-                                <a href="https://tryhackme.com/p/Will8San" target="_blank" class="link-text"><i class="fas fa-user-secret"></i> <span data-i18n="link_thm">Voir mon profil TryHackMe</span></a>
+                                <a href="https://tryhackme.com/p/ShonencY" target="_blank" class="link-text"><i class="fas fa-user-secret"></i> <span data-i18n="link_thm">Voir mon profil TryHackMe</span></a>
                             </p>
-                            <ul class="tech-tags"><li>TryHackMe</li><li>CTF</li></ul>
+                            <ul class="tech-tags">
+                                <li>TryHackMe</li>
+                                <li>Root-Me</li>
+                            </ul>
                         </div>
                     </article>
 
@@ -207,7 +211,7 @@
                             <h3 data-i18n="tit_204">Projet intégratif</h3>
                         </div>
                         <div class="card-body">
-                            <p data-i18n="desc_204">Projet d’équipe pour concevoir une infrastructure réseau sécurisée pour la NBA.</p>
+                            <p data-i18n="desc_204">Projet d’équipe (3 personnes) pour concevoir une infrastructure réseau sécurisée pour la NBA (scénario fictif), en appliquant des configurations sur switches, routeurs et serveurs DNS/DHCP/Web.</p>
                             <ul class="tech-tags"><li>Cisco</li><li data-i18n="tag_infra">Infra</li></ul>
                         </div>
                     </article>
@@ -218,7 +222,7 @@
                            <h3 data-i18n="tit_203">Solution informatique</h3>
                        </div>
                        <div class="card-body">
-                           <p data-i18n="desc_203">Conception d’une base de données SQL sur les incidents en cybersécurité.</p>
+                           <p data-i18n="desc_203">Conception d’une base de données SQL sur les incidents en cybersécurité des 10 dernières années, avec un diagramme UML pour structurer les liens entre classes.</p>
                            <ul class="tech-tags"><li>SQL</li><li>UML</li></ul>
                        </div>
                    </article>
@@ -229,7 +233,7 @@
                             <h3 data-i18n="tit_202">Mesures physiques</h3>
                         </div>
                         <div class="card-body">
-                            <p data-i18n="desc_202">Réalisation en binôme de mesures sur des systèmes de transmission.</p>
+                            <p data-i18n="desc_202">Réalisation en binôme de mesures sur des systèmes de transmission pour évaluer la qualité des signaux, avec analyse et présentation des résultats via cartographie radio et hypsogramme.</p>
                             <ul class="tech-tags"><li data-i18n="tag_sig">Signaux</li><li data-i18n="tag_mes">Mesures</li></ul>
                         </div>
                     </article>
@@ -240,7 +244,7 @@
                             <h3 data-i18n="tit_201">Réseaux locaux</h3>
                         </div>
                         <div class="card-body">
-                            <p data-i18n="desc_201">Obtention de la certification CCNA1, axée sur les bases des réseaux locaux.</p>
+                            <p data-i18n="desc_201">Obtention de la certification CCNA1, axée sur les bases des réseaux locaux et la configuration des équipements actifs.</p>
                             <ul class="tech-tags"><li>CCNA1</li><li>Switching</li></ul>
                         </div>
                     </article>
@@ -251,7 +255,7 @@
                             <h3 data-i18n="tit_105">Traiter des données</h3>
                         </div>
                         <div class="card-body">
-                            <p data-i18n="desc_105">J’ai approfondi Python pour traiter des données (dataset : Top 500 des businessmen).</p>
+                            <p data-i18n="desc_105">J’ai approfondi Python pour traiter des données (dataset : Top 500 des businessmen). Objectif : formater des données et réaliser des analyses complexes.</p>
                             <ul class="tech-tags"><li>Python</li><li>Data</li></ul>
                         </div>
                     </article>
@@ -262,7 +266,7 @@
                             <h3 data-i18n="tit_104">Présence en ligne</h3>
                         </div>
                         <div class="card-body">
-                            <p data-i18n="desc_104">Création d'un site portfolio respectant les normes W3C.</p>
+                            <p data-i18n="desc_104">J’ai découvert HTML et CSS pour créer un site de portfolio, hébergé sur les serveurs de l’IUT en respectant les normes W3C.</p>
                             <ul class="tech-tags"><li>HTML</li><li>CSS</li></ul>
                         </div>
                     </article>
@@ -273,7 +277,7 @@
                             <h3 data-i18n="tit_103">Transmission</h3>
                         </div>
                         <div class="card-body">
-                            <p data-i18n="desc_103">Mesures pour caractériser les supports de transmission (cuivre, fibre, coaxial).</p>
+                            <p data-i18n="desc_103">L’objectif était de réaliser des mesures pour caractériser les supports de transmission utilisés dans notre département d'IUT (cuivre, fibre, coaxial).</p>
                             <ul class="tech-tags"><li data-i18n="tag_cab">Câblage</li><li data-i18n="tag_phys">Physique</li></ul>
                         </div>
                     </article>
@@ -284,7 +288,7 @@
                             <h3 data-i18n="tit_102">Initiation Réseaux</h3>
                         </div>
                         <div class="card-body">
-                            <p data-i18n="desc_102">Conception d'une petite infrastructure réseau pour le festival du Printemps de Bourges.</p>
+                            <p data-i18n="desc_102">Conception d'une petite infrastructure réseau pour le festival du Printemps de Bourges dans un contexte fictif. Application des configs de base aux switches.</p>
                             <ul class="tech-tags"><li data-i18n="tag_infra">Infra</li><li>Switching</li></ul>
                         </div>
                     </article>
@@ -295,110 +299,8 @@
                             <h3 data-i18n="tit_101">Hygiène informatique</h3>
                         </div>
                         <div class="card-body">
-                            <p data-i18n="desc_101">Création de scénarios fictifs sur l'hygiène informatique (jeu de cartes).</p>
-                            <ul class="tech-tags"><li data-i18n="tag_sens">Sensibilisation</li><li data-i18n="tag_scen">Scénarios</li></ul>
-                        </div>
-                    </article>
-
-                </div>
-            </div>
-        </section>
-
-                   <article class="project-card" data-category="telecom">
-                        <div class="card-header">
-                            <span class="tag" data-i18n="tag_202">SAE 2.02</span>
-                            <h3 data-i18n="tit_202">Mesures physiques</h3>
-                        </div>
-                        <div class="card-body">
-                            <p data-i18n="desc_202">Réalisation en binôme de mesures sur des systèmes de transmission pour évaluer la qualité des signaux, avec analyse et présentation des résultats via cartographie radio et hypsogramme.</p>
-                            <ul class="tech-tags">
-                                <li data-i18n="tag_sig">Signaux</li>
-                                <li data-i18n="tag_mes">Mesures</li>
-                            </ul>
-                        </div>
-                    </article>
-
-                    <article class="project-card" data-category="network">
-                        <div class="card-header">
-                            <span class="tag" data-i18n="tag_201">SAE 2.01</span>
-                            <h3 data-i18n="tit_201">Réseaux locaux</h3>
-                        </div>
-                        <div class="card-body">
-                            <p data-i18n="desc_201">Obtention de la certification CCNA1, axée sur les bases des réseaux locaux et la configuration des équipements actifs.</p>
-                            <ul class="tech-tags">
-                                <li>CCNA1</li>
-                                <li>Switching</li>
-                            </ul>
-                        </div>
-                    </article>
-
-                    <article class="project-card" data-category="data">
-                        <div class="card-header">
-                            <span class="tag" data-i18n="tag_105">SAE 1.05</span>
-                            <h3 data-i18n="tit_105">Traiter des données</h3>
-                        </div>
-                        <div class="card-body">
-                            <p data-i18n="desc_105">J’ai approfondi Python pour traiter des données (dataset : Top 500 des businessmen). Objectif : formater des données et réaliser des analyses complexes.</p>
-                            <ul class="tech-tags">
-                                <li>Python</li>
-                                <li>Data</li>
-                            </ul>
-                        </div>
-                    </article>
-
-                    <article class="project-card" data-category="web">
-                        <div class="card-header">
-                            <span class="tag" data-i18n="tag_104">SAE 1.04</span>
-                            <h3 data-i18n="tit_104">Présence en ligne</h3>
-                        </div>
-                        <div class="card-body">
-                            <p data-i18n="desc_104">J’ai découvert HTML et CSS pour créer un site de portfolio, hébergé sur les serveurs de l’IUT en respectant les normes W3C.</p>
-                            <ul class="tech-tags">
-                                <li>HTML</li>
-                                <li>CSS</li>
-                            </ul>
-                        </div>
-                    </article>
-
-                    <article class="project-card" data-category="telecom">
-                        <div class="card-header">
-                            <span class="tag" data-i18n="tag_103">SAE 1.03</span>
-                            <h3 data-i18n="tit_103">Transmission</h3>
-                        </div>
-                        <div class="card-body">
-                            <p data-i18n="desc_103">L’objectif était de réaliser des mesures pour caractériser les supports de transmission utilisés dans notre département d'IUT (cuivre, fibre, coaxial).</p>
-                            <ul class="tech-tags">
-                                <li data-i18n="tag_cab">Câblage</li>
-                                <li data-i18n="tag_phys">Physique</li>
-                            </ul>
-                        </div>
-                    </article>
-
-                    <article class="project-card" data-category="network">
-                        <div class="card-header">
-                            <span class="tag" data-i18n="tag_102">SAE 1.02</span>
-                            <h3 data-i18n="tit_102">Initiation Réseaux</h3>
-                        </div>
-                        <div class="card-body">
-                            <p data-i18n="desc_102">Conception d'une petite infrastructure réseau pour le festival du Printemps de Bourges dans un contexte fictif. Application des configs de base aux switches.</p>
-                            <ul class="tech-tags">
-                                <li data-i18n="tag_infra">Infra</li>
-                                <li>Switching</li>
-                            </ul>
-                        </div>
-                    </article>
-
-                    <article class="project-card" data-category="security">
-                        <div class="card-header">
-                            <span class="tag" data-i18n="tag_101">SAE 1.01</span>
-                            <h3 data-i18n="tit_101">Hygiène informatique</h3>
-                        </div>
-                        <div class="card-body">
                             <p data-i18n="desc_101">Cette première SAE s'est présentée sous forme ludique : création de scénarios fictifs sur l'hygiène informatique pour faire deviner des méthodes d'attaques.</p>
-                            <ul class="tech-tags">
-                                <li data-i18n="tag_sens">Sensibilisation</li>
-                                <li data-i18n="tag_scen">Scénarios</li>
-                            </ul>
+                            <ul class="tech-tags"><li data-i18n="tag_sens">Sensibilisation</li><li data-i18n="tag_scen">Scénarios</li></ul>
                         </div>
                     </article>
 
@@ -461,6 +363,15 @@
             </div>
         </section>
     </main>
+
+    <div id="project-modal" class="modal">
+        <span class="close-modal">&times;</span>
+        <div class="modal-content">
+            <img id="modal-img" src="" alt="Project Image">
+            <button class="nav-btn prev-btn" id="prev-btn">&#10094;</button>
+            <button class="nav-btn next-btn" id="next-btn">&#10095;</button>
+        </div>
+    </div>
 
     <script src="assets/js/main.js"></script>
 </body>
