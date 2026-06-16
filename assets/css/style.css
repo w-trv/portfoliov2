@@ -458,6 +458,19 @@ main {
     transform: scale(1.05);
 }
 
+.badge-icon {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 20px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background: rgba(234, 179, 8, 0.08);
+    border: 1px solid rgba(234, 179, 8, 0.25);
+    color: #facc15;
+    font-size: 3rem;
+}
+
 .badge-info h4 {
     color: var(--text-main);
     font-size: 1.1rem;
@@ -477,7 +490,8 @@ main {
     border-radius: 50px; 
     
     /* 8px en haut, 4px en bas : ça force le texte à descendre visuellement */
-    padding: 8px 16px 4px 16px; 
+    padding: 0 16px; 
+    height: 52px;
     
     font-weight: 600;
     font-size: 0.7rem !important; 
@@ -488,7 +502,7 @@ main {
     align-items: center;      
     justify-content: center;  
     
-    line-height: normal;           
+    line-height: 1;           
     gap: 6px;                 
     
     margin-top: 12px;
@@ -500,6 +514,20 @@ main {
     background: rgba(16, 185, 129, 0.1); 
     color: #10b981 !important;
     border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+.status-verified span,
+.status-pending span {
+    display: inline !important;
+    margin: 0;
+    color: inherit;
+    font-size: inherit;
+    line-height: 1;
+}
+
+.status-verified i,
+.status-pending i {
+    line-height: 1;
 }
 
 .status-pending {
@@ -528,6 +556,16 @@ main {
 
 .badge-locked .badge-img {
     filter: grayscale(100%) opacity(0.5);
+}
+
+.badge-locked .stormshield-logo {
+    width: 116px;
+    height: 116px;
+    padding: 14px;
+    border-radius: 50%;
+    background: rgba(14, 165, 233, 0.08);
+    border: 1px solid rgba(56, 189, 248, 0.25);
+    filter: drop-shadow(0 8px 16px rgba(14, 165, 233, 0.18));
 }
 
 .badge-overlay {
@@ -561,7 +599,53 @@ main {
 }
 
 /* =========================================
-   7. PROJECTS SECTION
+   7. EXPERIENCE SECTION
+   ========================================= */
+.experience-wrapper {
+    max-width: 820px;
+    margin: 0 auto;
+}
+
+.experience-card {
+    border-color: rgba(34, 211, 238, 0.25);
+}
+
+.experience-brand {
+    position: relative;
+    min-height: 118px;
+    margin: 22px 25px 0;
+    padding: 20px 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border: 1px solid rgba(148, 163, 184, 0.16);
+    border-radius: 12px;
+    background: linear-gradient(135deg, rgba(15, 23, 42, 0.88), rgba(17, 26, 47, 0.58));
+}
+
+.experience-brand::after {
+    content: "";
+    position: absolute;
+    inset: 14px;
+    border: 1px solid rgba(34, 211, 238, 0.1);
+    border-radius: 8px;
+    pointer-events: none;
+}
+
+.cassi-banner {
+    position: relative;
+    z-index: 1;
+    width: min(100%, 560px);
+    max-height: 78px;
+    object-fit: contain;
+    object-position: center;
+    opacity: 0.95;
+    filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.22));
+}
+
+/* =========================================
+   8. PROJECTS SECTION
    ========================================= */
 .projects-grid {
     display: grid;
@@ -850,6 +934,14 @@ footer {
     
     .section-title { font-size: 2rem; }
     .project-card { margin-bottom: 20px; }
+    .experience-brand {
+        min-height: 104px;
+        margin: 20px 18px 0;
+        padding: 18px;
+    }
+    .cassi-banner {
+        max-height: 68px;
+    }
     
     .lang-btn {
         margin-left: 0;

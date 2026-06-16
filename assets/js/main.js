@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
         fr: {
             nav_home: "Accueil",
             nav_skills: "Compétences",
+            nav_experience: "Expérience",
             nav_projects: "Projets (SAE)",
             nav_hobbies: "Hobbies",
             nav_contact: "Me Contacter",
@@ -20,14 +21,13 @@ document.addEventListener('DOMContentLoaded', () => {
             btn_sae: "Voir mes SAE",
             btn_cv: "Mon CV",
             
-            stat_ctf: "Niveau CTF",
-            stat_eng: "Anglais (Cambridge)",
-            stat_ccna: "Validé (3 en cours)",
+            stat_eng: "Anglais",
+            stat_ccna: "Toutes les certifications CCNA validées",
             
             skills_title: "Mes Compétences 🛠️",
             cat_net: "Réseaux & Système",
             cat_dev: "Développement",
-            skill_cisco: "Réseaux Cisco (CCNA 2 validé)",
+            skill_cisco: "Réseaux Cisco (CCNA 1, 2, 3 validés)",
             skill_linux: "Linux / Serveurs (DNS, DHCP, Web)",
             skill_hack: "Hacking (CTF)",
             skill_py: "Python (Data)",
@@ -39,7 +39,14 @@ document.addEventListener('DOMContentLoaded', () => {
             cert_sub: "Badges vérifiés par Cisco Networking Academy",
             stat_verif: "Vérifié",
             stat_pend: "En cours",
+            stormshield_desc: "Certification Stormshield en cours",
             btn_credly: "Voir mon profil complet sur Credly",
+
+            exp_title: "Expérience professionnelle",
+            exp_tag: "Stage",
+            exp_cassi_title: "COMCYBER - CASSI",
+            exp_cassi_desc: "Stage réalisé au Centre d'Audits de la Sécurité des Systèmes d'Information (CASSI), rattaché au Commandement de la Cyberdéfense (COMCYBER).",
+            tag_cyberdefense: "Cyberdéfense",
             
             proj_title: "Projets Universitaires (SAEs) 🎓",
             tag_perso: "Personnel",
@@ -80,6 +87,7 @@ document.addEventListener('DOMContentLoaded', () => {
         en: {
             nav_home: "Home",
             nav_skills: "Skills",
+            nav_experience: "Experience",
             nav_projects: "Projects",
             nav_hobbies: "Hobbies",
             nav_contact: "Contact Me",
@@ -90,14 +98,13 @@ document.addEventListener('DOMContentLoaded', () => {
             btn_sae: "View Projects",
             btn_cv: "My Resume",
             
-            stat_ctf: "CTF Level",
-            stat_eng: "English (Cambridge)",
-            stat_ccna: "Validated (3 pending)",
+            stat_eng: "English",
+            stat_ccna: "All CCNA certifications validated",
             
             skills_title: "My Skills 🛠️",
             cat_net: "Networks & Systems",
             cat_dev: "Development",
-            skill_cisco: "Cisco Networks (CCNA 2 validated)",
+            skill_cisco: "Cisco Networks (CCNA 1, 2, 3 validated)",
             skill_linux: "Linux / Servers (DNS, DHCP, Web)",
             skill_hack: "Hacking (CTF)",
             skill_py: "Python (Data)",
@@ -109,7 +116,14 @@ document.addEventListener('DOMContentLoaded', () => {
             cert_sub: "Badges verified by Cisco Networking Academy",
             stat_verif: "Verified",
             stat_pend: "In Progress",
+            stormshield_desc: "Stormshield certification in progress",
             btn_credly: "View full Credly profile",
+
+            exp_title: "Professional Experience",
+            exp_tag: "Internship",
+            exp_cassi_title: "COMCYBER - CASSI",
+            exp_cassi_desc: "Internship completed at the Information Systems Security Audit Center (CASSI), attached to the Cyberdefense Command (COMCYBER).",
+            tag_cyberdefense: "Cyberdefense",
             
             proj_title: "Academic Projects 🎓",
             tag_perso: "Personal",
