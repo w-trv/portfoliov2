@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
             exp_title: "Expérience professionnelle",
             exp_tag: "Stage",
             exp_cassi_title: "COMCYBER - CASSI",
-            exp_cassi_desc: "Stage réalisé au COMCYBER - CASSI : contribution au maintien en conditions opérationnelles et de sécurité des systèmes d'information.",
+            exp_cassi_desc: "Stage réalisé au Commandement de la Cyberdéfense | Centre d'Audits de la Sécurité des Systèmes d'Information. J'ai eu pour mission de contribuer au maintien en conditions opérationnelles et de sécurité des systèmes d'information.",
             tag_cyberdefense: "Cyberdéfense",
             
             proj_title: "Projets académiques 🎓",
@@ -124,7 +124,7 @@ document.addEventListener('DOMContentLoaded', () => {
             exp_title: "Professional Experience",
             exp_tag: "Internship",
             exp_cassi_title: "COMCYBER - CASSI",
-            exp_cassi_desc: "Internship at COMCYBER - CASSI: contribution to maintaining information systems in operational and secure conditions.",
+            exp_cassi_desc: "Internship completed at the Cyberdefense Command | Information Systems Security Audit Center. My mission was to contribute to maintaining information systems in operational and secure conditions.",
             tag_cyberdefense: "Cyberdefense",
             
             proj_title: "Academic Projects 🎓",
