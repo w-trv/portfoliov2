@@ -204,8 +204,8 @@ main {
 
 .hero-grid {
     display: grid;
-    grid-template-columns: 1.2fr 0.8fr;
-    gap: 50px;
+    grid-template-columns: minmax(0, 1.35fr) minmax(240px, 0.65fr);
+    gap: 36px;
     align-items: center;
 }
 
@@ -236,13 +236,14 @@ main {
 
 .hero p {
     color: var(--text-muted);
-    font-size: 1.1rem;
-    max-width: 500px;
+    font-size: 1.02rem;
+    max-width: 680px;
     margin-bottom: 35px;
 }
 
 .cta-group {
     display: flex;
+    flex-wrap: wrap;
     gap: 15px;
     margin-bottom: 40px;
 }
@@ -301,8 +302,8 @@ main {
 
 .profile-blob {
     position: relative;
-    width: 350px;
-    height: 350px;
+    width: 300px;
+    height: 300px;
     border-radius: 50%;
     background: radial-gradient(circle at 30% 30%, rgba(59, 130, 246, 0.2), transparent);
     border: 2px solid var(--border);
@@ -689,6 +690,12 @@ main {
 
 .tag-accent { color: var(--accent); }
 
+.tag-muted {
+    color: var(--text-muted);
+    font-weight: 600;
+    margin-left: 10px;
+}
+
 .project-card h3 { font-size: 1.3rem; margin-bottom: 10px; color: #fff; }
 .project-card p { font-size: 0.95rem; color: var(--text-muted); margin-bottom: 20px; flex-grow: 1; }
 
@@ -740,6 +747,11 @@ main {
 .hobby-box h4 { margin-bottom: 10px; font-size: 1.1rem; }
 .hobby-box p { color: var(--text-muted); font-size: 0.9rem; }
 
+.hobby-ctf {
+    border-color: rgba(59, 130, 246, 0.25);
+    background: linear-gradient(180deg, var(--bg-card) 0%, rgba(59, 130, 246, 0.05) 100%);
+}
+
 /* =========================================
    9. CONTACT & FOOTER (FIXED)
    ========================================= */
@@ -770,9 +782,6 @@ main {
 
 /* Footer fixé en bas grâce à Grid sur le body */
 footer {
-    grid-row-start: 2; /* Force le footer sur la 2ème ligne */
-    grid-row-end: 3;
-    
     color: var(--text-muted);
     font-size: 0.85rem;
     border-top: 1px solid var(--border);
@@ -928,7 +937,7 @@ footer {
 
     .hero-grid { grid-template-columns: 1fr; text-align: center; }
     .hero-img-container { order: -1; margin-bottom: 30px; display: flex; justify-content: center; }
-    .profile-blob { width: 220px; height: 220px; }
+    .profile-blob { width: 200px; height: 200px; }
     .cta-group { justify-content: center; flex-direction: column; }
     .hero-stats { justify-content: center; flex-wrap: wrap; gap: 20px; }
     
