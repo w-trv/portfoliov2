@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
             stat_eng: "Anglais",
             stat_ccna: "Certifications Cisco validées",
             
-            skills_title: "Mes Compétences 🛠️",
+            skills_title: "Compétences",
             cat_net: "Réseaux & Système",
             cat_dev: "Développement",
             skill_cisco: "Réseaux Cisco (CCNA 1,2,3 validés)",
@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
             exp_cassi_desc: "Stage réalisé au Commandement de la Cyberdéfense | Centre d'Audits de la Sécurité des Systèmes d'Information. J'ai eu pour mission de contribuer au maintien en condition opérationnelle et de sécurité des systèmes d'information.",
             tag_cyberdefense: "Cyberdéfense",
             
-            proj_title: "Projets académiques 🎓",
+            proj_title: "Projets académiques",
             tag_perso: "Personnel",
             desc_ctf: "Je fais des défis pratiques de hacking que l'on appelle \"CTF\". Le but consiste à pirater une machine en partant d'une application web vulnérable fictive. Je suis actuellement niveau LEGEND et me situe à la 20k ème place (Top 2%).",
             link_thm: "Voir mon profil TryHackMe",
@@ -86,7 +86,7 @@ document.addEventListener('DOMContentLoaded', () => {
             hob_soc_t: "Relationnel",
             hob_soc_d: "Je n'ai aucun mal à faire de nouvelles rencontres et à avoir un bon feeling avec les gens. J'aime le travail d'équipe.",
             
-            contact_t: "Me Contacter 📞",
+            contact_t: "Contact",
             contact_d: "Étudiant motivé par les défis techniques, n'hésitez pas à me contacter pour échanger.",
             footer: "© 2026 William TROUVÉ — Portfolio Étudiant"
         },
@@ -108,7 +108,7 @@ document.addEventListener('DOMContentLoaded', () => {
             stat_eng: "English",
             stat_ccna: "Cisco certifications validated",
             
-            skills_title: "My Skills 🛠️",
+            skills_title: "Skills",
             cat_net: "Networks & Systems",
             cat_dev: "Development",
             skill_cisco: "Cisco Networks (CCNA 1,2,3 validated)",
@@ -133,7 +133,7 @@ document.addEventListener('DOMContentLoaded', () => {
             exp_cassi_desc: "Internship completed at the Cyberdefense Command | Information Systems Security Audit Center. My mission was to contribute to maintaining information systems in operational and secure condition.",
             tag_cyberdefense: "Cyberdefense",
             
-            proj_title: "Academic Projects 🎓",
+            proj_title: "Academic Projects",
             tag_perso: "Personal",
             desc_ctf: "I participate in practical hacking challenges called 'CTF'. The goal is to hack a machine starting from a fictional vulnerable web application. I am currently LEGEND level and ranked around 20k (Top 2%).",
             link_thm: "View my TryHackMe profile",
@@ -168,7 +168,7 @@ document.addEventListener('DOMContentLoaded', () => {
             hob_soc_t: "Interpersonal Skills",
             hob_soc_d: "I easily connect with new people and enjoy building positive professional relationships. Teamwork is where I thrive.",
             
-            contact_t: "Contact Me 📞",
+            contact_t: "Contact",
             contact_d: "Motivated student ready for technical challenges, feel free to contact me.",
             footer: "© 2026 William TROUVÉ — Student Portfolio"
         }
