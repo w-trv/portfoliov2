@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
             nav_contact: "Me Contacter",
             
             hero_badge: "BUT Réseaux & Télécoms parcours Cybersécurité",
-            hero_subtitle: "Étudiant BUT2 R&T parcours Cybersécurité <br><span class='highlight'>à l'IUT de La Rochelle</span>.",
+            hero_subtitle: "Étudiant BUT3 R&T parcours Cybersécurité <br><span class='highlight'>à l'IUT de La Rochelle</span>.",
             hero_desc: "Mon objectif à long terme est d’évoluer vers la fonction de RSSI. En sortie d’études, je vise un poste d’assistant RSSI, de chargé de mission SSI ou de consultant GRC junior, afin de développer mes compétences en gouvernance, analyse des risques et pilotage de la sécurité. Mon expérience en CTF me donne une aisance technique pour analyser, comprendre et sécuriser des environnements numériques.",
             btn_sae: "Voir mes projets",
             btn_cv: "Mon CV",
@@ -99,7 +99,7 @@ document.addEventListener('DOMContentLoaded', () => {
             nav_contact: "Contact Me",
             
             hero_badge: "Bachelor's Degree in Networks & Cybersecurity",
-            hero_subtitle: "2nd Year Undergraduate Student <br><span class='highlight'>University Institute of Technology (IUT)</span>.",
+            hero_subtitle: "3rd Year Undergraduate Student <br><span class='highlight'>University Institute of Technology (IUT)</span>.",
             hero_desc: "My long-term goal is to progress toward a CISO role. After graduation, I am aiming for a position as an assistant CISO, information security project officer, or junior GRC consultant, in order to develop my skills in governance, risk analysis, and security management. My CTF experience gives me the technical confidence to analyze, understand, and secure digital environments.",
             btn_sae: "View Projects",
             btn_cv: "My Resume",
